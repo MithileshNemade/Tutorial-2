@@ -66,35 +66,46 @@ public class Evaluate
             return true;
     }
 
+ 
     public static Double perform(char op, double b, double a)
     {
         switch (op)
         {
         case '+':
-            return a + b;
+            return add(a,b);
         case '-':
-            return a - b;
+            return subtract(a,b);
         case '*':
-            return a * b;
+            return multiply(a,b);
         case '/':
             if (b == 0)
                 throw new
                 UnsupportedOperationException("Cannot divide by zero");
-            return a / b;
+            return divide(a,b);
         }
         return 0.0;
     }
 
-	/*public static void main(String[] args) {
+	public static Double divide(double a, double b) {
 		// TODO Auto-generated method stub
-		String exp="";
-		System.out.println("Enter the expression: ");
-		Scanner sc1=new Scanner(System.in);
-		exp=sc1.nextLine();
-		Double result;
-		result=evaluate(exp);
-		Print(result);
+		return a/b;
+	}
 
-	}*/
+	public static Double multiply(double a, double b) {
+		// TODO Auto-generated method stub
+		return a*b;
+	}
+
+	public static Double subtract(double a, double b) {
+		// TODO Auto-generated method stub
+		return a-b;
+	}
+
+	public static Double add(double a, double b) {
+		// TODO Auto-generated method stub
+		
+		return a+b;
+	}
+	
 
 }
